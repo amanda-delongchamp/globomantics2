@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {logo} from "./banner.module.css";
 
-const Banner = () => {
+const Banner = ({children}) => {
     return(
         <header className="row mb-4">
             <div className="col-5">
@@ -9,7 +9,7 @@ const Banner = () => {
                 className={logo} />
             </div>
             <div className="col-7 mt-5">
-                Providing houses all over the world.
+                {children}
             </div>
         </header>
     );
